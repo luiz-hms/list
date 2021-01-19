@@ -1,6 +1,6 @@
 # list
 
-A new Flutter project.
+Lista de compra. Adiciona, marca como concluído e exclui um item além de reogarnizar os itens por meio de refresh
 
 ## Getting Started
 
