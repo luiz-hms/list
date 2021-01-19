@@ -1,16 +1,28 @@
 # list
 
-Lista de compra. Adiciona, marca como concluído e exclui um item além de reogarnizar os itens por meio de refresh
+Lista de compra. Adiciona, marca como concluído e exclui um item além de reogarnizar os itens por meio de refresh.
+O intuito do projeto é apenas para aprendizado.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
+Este projeto é um ponto de partida para um aplicativo Flutter.
+Alguns recursos para você começar, se este for seu primeiro projeto Flutter:
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Para obter ajuda para começar a usar o Flutter, consulte nosso
+[online documentation](https://flutter.dev/docs), que oferece tutoriais,
+amostras, orientação sobre desenvolvimento móvel e uma referência completa de API.
+
+### Features
+
+- Adição de item para compra.
+- Marcar como comprado.
+- Refresh para atualizar e organizar a lista
+- Exclusão de item.
+
+###Images
+
+Image:
+![](https://i.imgur.com/rVPVhOp.jpg)
