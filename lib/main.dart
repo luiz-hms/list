@@ -8,6 +8,7 @@ import 'package:path_provider/path_provider.dart';
 void main() {
   runApp(MaterialApp(
     home: Home(),
+    debugShowCheckedModeBanner: false,
   ));
 }
 
@@ -40,6 +41,24 @@ class _HomeState extends State<Home> {
       _toDoList.add(newToDo);
       _saveData();
     });
+  }
+
+  Future<Null> _refresh() async {
+    await Future.delayed(
+      Duration(seconds: 1),
+    );
+    setState(() {
+      _toDoList.sort((a, b) {
+        if (a['ok'] && !b['ok'])
+          return 1;
+        else if (!a['ok'] && b['ok'])
+          return -1;
+        else
+          return 0;
+      });
+      _saveData();
+    });
+    return null;
   }
 
   @override
@@ -75,11 +94,13 @@ class _HomeState extends State<Home> {
             ),
           ),
           Expanded(
+              child: RefreshIndicator(
+            onRefresh: _refresh,
             child: ListView.builder(
                 padding: EdgeInsets.only(top: 10.0),
                 itemCount: _toDoList.length,
                 itemBuilder: buildItem),
-          ),
+          )),
         ],
       ),
     );
